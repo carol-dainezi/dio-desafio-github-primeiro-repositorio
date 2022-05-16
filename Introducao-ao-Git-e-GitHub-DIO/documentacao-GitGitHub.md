@@ -52,6 +52,8 @@ O **commit** é um processo no qual o Git "faz uma snapshot" das mudanças reali
 É um modo de estabelecer uma conexão segura com um servidor remoto, onde um par de chaves únicas são geradas - uma pública e uma privada. Com elas configuradas, a conexão SFTP/SSH para o servidor só é autorizada se a chave privada do usuário for compatível com a chave pública do servidor.
 
  - **ssh-keygen -t ed25519 -C email@@email.com** - Cria um par de chaves SSH na pasta .ssh/ no local especificado, uma "id_ed25519" e uma "id_ed25519.pub". Elas são, respectivamente, suas chaves privadas e públicas. Para colocar a chave pública no GitHub, ir até Settings > SSH and GPG Keys > New SSH Key e colar o conteúdo do arquivo .pub.*De preferência, usar o mesmo email da sua conta GitHub para o comando.*
+ - **eval $(ssh-agent -s)** - Inicia o agente que irá tratar da autenticação das chaves SSH.
+ - **ssh-add id_ed25519** - Adiciona sua chave **privada** ao agente. Sempre que necessário, ele irá usar a chave privada pra criptografar/descriptografar arquivos.
 
  ## Linguagem Markdown
 
