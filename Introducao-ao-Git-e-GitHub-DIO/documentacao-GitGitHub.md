@@ -1,6 +1,7 @@
 # Anotações e estudos sobre o curso "Introdução ao Git e ao GitHub"
 
 ## Comandos básicos da CLI
+
 O Git opera principalmente numa **CLI**, ou **command-line interface** que possui comandos similares aos de SOs com base em Linux/Unix. Alguns comandos existentes são:
 
  - **ls** - Lista os conteúdos de um diretório.
@@ -13,6 +14,7 @@ O Git opera principalmente numa **CLI**, ou **command-line interface** que possu
  - **echo** - Imprime algo na tela ou imprime o conteúdo para um novo arquivo.
 
 ## Comandos específicos ao Git
+
 O Git possui comandos específicos para seu funcionamento, dentre eles:
 
 ### Staging, tracking e commit
@@ -36,6 +38,7 @@ O Git possui comandos específicos para seu funcionamento, dentre eles:
 
 
 ## Ciclo de vida de arquivos no Git
+
 Os arquivos no Git podem existir nas seguintes formas:
 
  - **Untracked** - Não rastreadas pelo Git.
@@ -43,12 +46,15 @@ Os arquivos no Git podem existir nas seguintes formas:
  - **Staged** - O arquivo está pronto para o commit.
 
 ## Commit
+
 O **commit** é um processo no qual o Git "faz uma snapshot" das mudanças realizadas no local de trabalho até o momento. Esse commit pode então ser mantido no repositório local e até mesmo lançado para o repositório remoto (no caso, o GitHub).
 
 ## SHA-1
+
 **SHA-1 (Secure Hash Algorithm)** é uma função de criptografia que serve para processar informação. No contexto do Git, ele é usado para controlar o versionamento de código, já que a encriptação SHA-1 gera uma string de 40 caracteres completamente única àquele arquivo, especificamente naquele estado específico. Uma simples mudança como apagar uma vírgula gera um SHA-1 totalmente diferente e reverter a mudança retorna o SHA-1 ao seu estado anterior.
 
 ## Chave SSH
+
 É um modo de estabelecer uma conexão segura com um servidor remoto, onde um par de chaves únicas são geradas - uma pública e uma privada. Com elas configuradas, a conexão SFTP/SSH para o servidor só é autorizada se a chave privada do usuário for compatível com a chave pública do servidor.
 
  - **ssh-keygen -t ed25519 -C email@@email.com** - Cria um par de chaves SSH na pasta .ssh/ no local especificado, uma "id_ed25519" e uma "id_ed25519.pub". Elas são, respectivamente, suas chaves privadas e públicas. Para colocar a chave pública no GitHub, ir até Settings > SSH and GPG Keys > New SSH Key e colar o conteúdo do arquivo .pub.*De preferência, usar o mesmo email da sua conta GitHub para o comando.*
